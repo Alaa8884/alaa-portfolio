@@ -3,17 +3,21 @@
 @tailwind utilities;
 
 :root {
-  font-family: "Inter", sans-serif;
+  font-family: 'Inter', sans-serif;
   font-optical-sizing: auto;
   scroll-behavior: smooth;
   --main-background: #000;
   --main-color: #fff;
 }
 
-html {
-  font-size: 62.5%;
+.my-photo {
+  background-image: url("./assets/images/my_photo.webp");
 }
 
-.work, .about, .projects, .skills, .contact {
-  scroll-margin-top: 8rem;
+.work,
+.about,
+.projects,
+.skills,
+.contact {
+  scroll-margin-top: 5rem;
 }

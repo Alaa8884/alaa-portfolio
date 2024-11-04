@@ -1,9 +1,5 @@
-
 function App() {
-  
-  return (
-   <h1 className=' text-2xl font-bold bg-red-500'>App</h1>
-  )
+  return <h1 className=" bg-red-500 font-serif text-2xl font-bold">App</h1>;
 }
 
-export default App
+export default App;
