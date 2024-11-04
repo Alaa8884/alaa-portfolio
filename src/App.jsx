@@ -1,5 +1,13 @@
+import Header from './components/header/Header';
+import BackGround from './components/ui/BackGround';
+
 function App() {
-  return <h1 className=" bg-red-500 font-serif text-2xl font-bold">App</h1>;
+  return (
+    <>
+      <BackGround />
+      <Header/>
+    </>
+  );
 }
 
 export default App;
