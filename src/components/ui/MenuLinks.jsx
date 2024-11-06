@@ -27,7 +27,7 @@ const itemVariants = {
 function MenuLinks({ setOpen }) {
   return (
     <motion.div
-      className="links absolute flex h-full w-full flex-col items-center justify-center gap-4 text-lg"
+      className="links absolute flex h-full w-full flex-col items-center justify-center gap-6  md:gap-8 md:text-2xl"
       variants={variants}
     >
       {MENULINKS.map((item, index) => (
