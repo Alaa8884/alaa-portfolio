@@ -2,15 +2,14 @@ import { MENULINKS } from '../../assets/constants';
 import MobileMenu from './MobileMenu';
 
 function NavBar() {
-  
   return (
     <nav>
       <div className="mx-auto flex max-w-6xl items-center justify-between bg-stone-950/30 p-4 backdrop-blur-lg md:my-2 md:rounded-xl">
-        <div className="tracking- bg-gradient-to-r from-purple-500 to-indigo-400 bg-clip-text font-new-mono text-3xl uppercase text-transparent md:text-5xl">
+        <h1 className="tracking-widest font-new-mono text-3xl uppercase md:text-5xl">
           <a href="#">
-            Alaa <span className="text-white"> M.</span>
+            Alaa. M
           </a>
-        </div>
+        </h1>
         <div className="hidden space-x-8 md:flex">
           {MENULINKS.map((link, index) => (
             <a

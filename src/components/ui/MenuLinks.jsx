@@ -35,7 +35,7 @@ function MenuLinks({ setOpen }) {
           href={item.href}
           key={index}
           variants={itemVariants}
-          whileHover={{ scale: 1.2 }}
+          whileHover={{ scale: 1.3 }}
           whileTap={{ scale: 0.95 }}
           onClick={() => setOpen((prev) => !prev)}
         >
