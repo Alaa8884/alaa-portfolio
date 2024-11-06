@@ -7,7 +7,10 @@ function App() {
     <>
       <BackGround />
       <Header />
+      <main className=' antialiased overflow-x-hidden max-w-7xl mx-auto relative z-30'>
       <Hero/>
+
+      </main>
     </>
   );
 }
