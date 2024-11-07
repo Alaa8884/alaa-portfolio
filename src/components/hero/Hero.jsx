@@ -21,13 +21,13 @@ const imageVariants = {
   hidden: { clipPath: 'inset( 50% 0 50%)' },
   visible: {
     clipPath: 'inset( 0% 0 0%)',
-    transition: { duration: 1.2, ease: 'ease' },
+    transition: { duration: 1.2, ease: 'easeInOut' },
   },
 };
 
 function Hero() {
   return (
-    <section >
+    <section>
       <div className="relative flex min-h-screen flex-col flex-wrap items-center justify-center text-white md:flex-row">
         <motion.div
           className="w-full p-8 md:w-1/2"
@@ -57,18 +57,23 @@ function Hero() {
             className="text-xl leading-8 md:text-2xl lg:text-3xl"
             variants={textVariants}
           >
-            I&apos;m currently seeking for a new opportunity so helping bring new visions to life
-            through interactive digital solutions.
+            I&apos;m currently seeking for a new opportunity so helping bring
+            new visions to life through interactive digital solutions.
           </motion.p>
           <motion.a
-            className="mt-8 flex items-center justify-center rounded-2xl bg-stone-50 p-3 text-center leading-4 text-stone-950 lg:p-4 w-44 justify-self-end md:justify-self-start"
+            className="mt-8 flex items-center justify-center justify-self-end md:justify-self-start"
             href={my_resume}
             download
             rel="noopener noreferrer"
             target="_blank"
             variants={textVariants}
           >
-            Download Resume
+            <button className="group relative min-h-[50px] w-40 overflow-hidden rounded-2xl border border-purple-500 text-purple-500 bg-stone-50 shadow-2xl transition-all before:absolute before:left-0 before:top-0 before:h-0 before:w-1/4 before:bg-purple-500 before:duration-300 after:absolute after:bottom-0 after:right-0 after:h-0 after:w-1/4 after:bg-purple-500 after:duration-300 hover:text-white hover:before:h-full hover:after:h-full">
+              <span className="top-0 flex h-full w-full items-center justify-center before:absolute before:bottom-0 before:left-1/4 before:z-0 before:h-0 before:w-1/4 before:bg-purple-500 before:duration-300 after:absolute after:right-1/4 after:top-0 after:z-0 after:h-0 after:w-1/4 after:bg-purple-500 after:duration-300 hover:text-white group-hover:before:h-full group-hover:after:h-full"></span>
+              <span className="absolute bottom-0 left-0 right-0 top-0 z-10 flex h-full w-full items-center justify-center font-semibold group-hover:text-white">
+                Download Resume
+              </span>
+            </button>
           </motion.a>
         </motion.div>
         <motion.div
@@ -82,7 +87,7 @@ function Hero() {
             alt="My photo"
             width={350}
             height={350}
-            className="h-[250px] w-[250px] rounded-3xl md:h-[400px] md:w-[400px]"
+            className="h-[300px] w-[300px] rounded-3xl md:h-[350px] md:w-[350px]"
           />
         </motion.div>
       </div>
