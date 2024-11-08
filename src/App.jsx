@@ -1,5 +1,6 @@
 import Header from './components/header/Header';
 import Hero from './components/hero/Hero';
+import Projects from './components/projects/Projects';
 import BackGround from './components/ui/BackGround';
 
 function App() {
@@ -7,9 +8,9 @@ function App() {
     <>
       <BackGround />
       <Header />
-      <main className=' antialiased overflow-x-hidden max-w-7xl mx-auto relative z-30'>
-      <Hero/>
-
+      <main className="relative z-30 mx-auto max-w-7xl overflow-x-hidden antialiased">
+        <Hero />
+        <Projects />
       </main>
     </>
   );

@@ -1,5 +1,4 @@
-import NavBar from "../ui/NavBar";
-
+import NavBar from "./NavBar";
 function Header() {
   return (
     <header className="header fixed w-full left-0 top-0 z-50">
