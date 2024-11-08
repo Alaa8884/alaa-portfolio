@@ -27,7 +27,7 @@ function ProjectCard({ item }) {
   const { image, name, description, gitHubLink, liveDemoLink, tech } = item;
   return (
     <motion.div
-      className="relative h-[300px] w-[300] overflow-hidden rounded-lg transition-transform md:w-[350px] lg:w-[400px]"
+      className="relative h-[300px] w-[300] overflow-hidden rounded-lg transition-transform md:w-[350px] lg:w-[380px] mb-5"
       variants={projectVariants}
       initial="hidden"
       whileInView="visible"
