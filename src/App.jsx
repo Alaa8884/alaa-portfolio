@@ -1,3 +1,4 @@
+import About from './components/about/About';
 import Header from './components/header/Header';
 import Hero from './components/hero/Hero';
 import Projects from './components/projects/Projects';
@@ -11,6 +12,7 @@ function App() {
       <Header />
       <main className="relative z-30 mx-auto max-w-7xl overflow-x-hidden antialiased">
         <Hero />
+        <About/>
         <Skills />
         <Projects />
       </main>

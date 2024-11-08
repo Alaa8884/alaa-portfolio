@@ -16,7 +16,7 @@ const headingVariants = {
 function SectionHeading({children}) {
   return (
     <motion.h1
-      className="mb-5 text-center font-new-mono text-[28px] tracking-wider md:text-start md:text-4xl lg:text-5xl"
+      className="mb-6 text-center font-new-mono text-[28px] tracking-wider md:text-start md:text-4xl lg:text-5xl"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: false }}

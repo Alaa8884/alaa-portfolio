@@ -31,7 +31,7 @@ function Hero() {
     <section>
       <div className="relative flex min-h-screen flex-col-reverse flex-wrap items-center justify-center text-white md:flex-row">
         <motion.div
-          className="w-full p-5 md:w-1/2 md:p-8"
+          className="w-full p-5 md:w-1/2 md:p-6"
           initial="hidden"
           animate="visible"
           variants={containerVariants}
