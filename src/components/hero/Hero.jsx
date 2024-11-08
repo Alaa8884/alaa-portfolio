@@ -49,13 +49,13 @@ function Hero() {
             Alaa <span className="ml-3">Mohammed</span>
           </motion.h1>
           <motion.p
-            className="mb-4 text-xl md:text-2xl"
+            className="mb-4 text-base md:text-2xl"
             variants={textVariants}
           >
             Frontend developer React.js with 1 year of experience.
           </motion.p>
           <motion.p
-            className="text-xl leading-8 md:text-2xl"
+            className="text-base leading-8 md:text-2xl"
             variants={textVariants}
           >
             Building interactive digital solutions that drive business growth.
