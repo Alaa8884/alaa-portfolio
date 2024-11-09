@@ -1,5 +1,10 @@
-import SectionHeading from '../ui/SectionHeading';
 import { motion } from 'framer-motion';
+import { RiDownload2Fill } from '@remixicon/react';
+import Button from '../ui/Button';
+import SectionHeading from '../ui/SectionHeading';
+import my_resume from '../../assets/resume/my-resume.pdf';
+
+
 const aboutVariantsFromLeft = {
   hidden: { opacity: 0, y: 70, x: -350 },
   visible: {
@@ -22,7 +27,7 @@ const aboutVariantsFromRight = {
 function About() {
   return (
     <section
-      className="about-section mx-auto md:min-h-screen px-4 pt-7 md:px-6"
+      className="about-section mx-auto px-4 pt-7 md:min-h-screen md:px-6"
       id="about"
     >
       <SectionHeading>About Me</SectionHeading>
@@ -80,6 +85,22 @@ function About() {
         up-to-date with the latest trends in web development, seeking to have an
         opportunity that matches my skills.
       </motion.p>
+      <motion.a
+        className="mt-8 flex items-center justify-center justify-self-end md:justify-self-start"
+        href={my_resume}
+        download
+        rel="noopener noreferrer"
+        target="_blank"
+        variants={aboutVariantsFromLeft}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: false }}
+      >
+        <Button btnAnimated="secondary">
+          {' '}
+          Download CV <RiDownload2Fill className="ml-3" size={20} />
+        </Button>
+      </motion.a>
     </section>
   );
 }
