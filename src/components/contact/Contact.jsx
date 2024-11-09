@@ -1,5 +1,8 @@
+import { useRef } from 'react';
 import { motion } from 'framer-motion';
-import emailjs from 'emailjs-com';
+import Swal from 'sweetalert2';
+
+import emailjs from '@emailjs/browser';
 import Lottie from 'lottie-react';
 import SectionHeading from '../ui/SectionHeading';
 import contact from '../../assets/contact_animation/Contact.json';
@@ -21,7 +24,7 @@ const aboutVariantsFromLeft = {
   },
 };
 const aboutVariantsFromRight = {
-  hidden: { opacity: 0, y: 70,x: 200 },
+  hidden: { opacity: 0, y: 70, x: 200 },
   visible: {
     opacity: 1,
     x: 0,
@@ -30,30 +33,41 @@ const aboutVariantsFromRight = {
   },
 };
 
-
-
 function Contact() {
+  const formRef = useRef();
+  const nameRef = useRef();
+  const emailRef = useRef();
+  const messageRef = useRef();
 
-function handleSendEmail(e) {
-  e.preventDefault(); 
-  emailjs
-    .sendForm(
-      'service_ltsehel',
-      'template_1v0990b',
-      e.target,
-      '98rJSYQDr1YvEqLPXQjnd',
-    )
-    .then(
-      // eslint-disable-next-line no-unused-vars
-      (result) => {
-        window.location.reload();
-      },
-      (error) => {
-        console.log(error.text);
-      },
-    );
-}
+  const phoneNumber = '+201019365451';
+  const message =
+    "Hi, I'm interested in your frontend skills. Can you tell me more about your self?";
 
+  const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+
+  const handleSendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm('service_ltsehel', 'template_1v0990b', formRef.current, {
+        publicKey: 'Rd6u_wdMbKC5H5EuS',
+      })
+      .then(
+        () => {
+          Swal.fire({
+            title: 'Success!',
+            text: 'Message sent successfully',
+            icon: 'success',
+          });
+          nameRef.current.value = '';
+          emailRef.current.value = '';
+          messageRef.current.value = '';
+        },
+        (error) => {
+          console.log('FAILED...', error.text);
+        },
+      );
+  };
 
   return (
     <section
@@ -86,8 +100,8 @@ function handleSendEmail(e) {
                 <RiLinkedinBoxFill />
               </a>
               <a
-                href="https://www.linkedin.com/in/alaa-mohammed-youssef-9b9268220/"
-                className="text-[#25d366]"
+                href={whatsappUrl}
+                className="text-[#25d366]"target="_blank" rel="noopener noreferrer"
               >
                 <RiWhatsappFill />
               </a>
@@ -107,6 +121,7 @@ function handleSendEmail(e) {
             whileInView="visible"
             viewport={{ once: false }}
             variants={aboutVariantsFromRight}
+            ref={formRef}
           >
             <h1 className="mb-7 text-4xl font-bold">Contact Me</h1>
             <div className="mb-4">
@@ -116,7 +131,10 @@ function handleSendEmail(e) {
               <input
                 type="text"
                 id="name"
+                name="user_name"
+                ref={nameRef}
                 placeholder="Full Name"
+                required
                 className="mx-auto mt-2 block w-full rounded-md border-purple-500 p-2 text-stone-800 shadow-sm outline-none focus:border-purple-600 focus:ring focus:ring-purple-500 focus:ring-opacity-50"
               />
             </div>
@@ -127,7 +145,10 @@ function handleSendEmail(e) {
               <input
                 type="email"
                 id="email"
+                name="user_email"
+                ref={emailRef}
                 placeholder="Email"
+                required
                 className="mx-auto mt-2 block w-full rounded-md border-purple-500 p-2 text-stone-800 shadow-sm outline-none focus:border-purple-600 focus:ring focus:ring-purple-500 focus:ring-opacity-50"
               />
             </div>
@@ -137,7 +158,10 @@ function handleSendEmail(e) {
               </label>
               <textarea
                 id="message"
+                name="message"
+                ref={messageRef}
                 placeholder="Enter Your Message"
+                required
                 className="focus:ring-opacity- mx-auto mt-2 block h-32 w-full resize-none rounded-md border-purple-500 p-2 text-stone-800 shadow-sm outline-none focus:border-purple-600 focus:ring focus:ring-purple-500"
               />
             </div>
