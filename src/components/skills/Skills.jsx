@@ -17,7 +17,7 @@ import SkillCard from './SkillCard';
 
 function Skills() {
   return (
-    <section className="skills-section mb-8 min-h-96 px-2 md:px-6" id="skills">
+    <section className="skills-section my-9 min-h-96 px-2 md:px-6" id="skills">
       <SectionHeading>My Skills</SectionHeading>
       <div className="mt-12 flex flex-wrap items-center justify-center gap-2">
         <SkillCard image={Html}>Html</SkillCard>

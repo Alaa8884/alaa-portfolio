@@ -1,9 +1,9 @@
+import emailjs from 'emailjs-com';
 import Lottie from 'lottie-react';
 import SectionHeading from '../ui/SectionHeading';
 import contact from '../../assets/contact_animation/Contact.json';
 
 import {
- 
   RiLinkedinBoxFill,
   RiMailSendFill,
   RiPhoneFill,
@@ -11,6 +11,28 @@ import {
 } from '@remixicon/react';
 
 function Contact() {
+
+function handleSendEmail(e) {
+  e.preventDefault(); 
+  emailjs
+    .sendForm(
+      'service_ltsehel',
+      'template_1v0990b',
+      e.target,
+      '98rJSYQDr1YvEqLPXQjnd',
+    )
+    .then(
+      // eslint-disable-next-line no-unused-vars
+      (result) => {
+        window.location.reload();
+      },
+      (error) => {
+        console.log(error.text);
+      },
+    );
+}
+
+
   return (
     <section
       className="contact-section relative mt-5 w-full overflow-hidden bg-stone-950/30 px-6 pb-3 pt-9 backdrop-blur-lg"
@@ -41,20 +63,19 @@ function Contact() {
               >
                 <RiWhatsappFill />
               </a>
-              <a
-                href="tel:+201019365451"
-                className="text-[#06f55e]"
-              >
+              <a href="tel:+201019365451" className="text-[#06f55e]">
                 <RiPhoneFill />
               </a>
-
             </div>
             <Lottie
               animationData={contact}
               className="mx-auto w-[300px] md:h-[350px] md:w-[350px] lg:h-[500px] lg:w-[500px]"
             />
           </div>
-          <form className="w-full rounded-lg border border-purple-500 p-6 shadow-lg shadow-purple-500 md:w-1/2">
+          <form
+            className="w-full rounded-lg border border-purple-500 p-6 shadow-lg shadow-purple-500 md:w-1/2"
+            onSubmit={handleSendEmail}
+          >
             <h1 className="mb-7 text-4xl font-bold">Contact Me</h1>
             <div className="mb-4">
               <label htmlFor="name" className="block text-sm font-medium">

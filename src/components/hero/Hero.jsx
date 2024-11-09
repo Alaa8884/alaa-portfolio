@@ -22,7 +22,7 @@ const imageVariants = {
   hidden: { clipPath: 'inset( 50% 0 50%)' },
   visible: {
     clipPath: 'inset( 0% 0 0%)',
-    transition: { duration: 1.2, ease: 'easeInOut' },
+    transition: { duration: 0.4, ease: 'easeInOut' },
   },
 };
 
@@ -89,6 +89,7 @@ function Hero() {
             width={350}
             height={350}
             className="mt-12 h-[200px] w-[200px] rounded-3xl md:mt-0 md:h-[350px] md:w-[350px]"
+            loading='lazy'
           />
         </motion.div>
       </div>
