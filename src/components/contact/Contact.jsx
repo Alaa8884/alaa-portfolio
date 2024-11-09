@@ -71,7 +71,7 @@ function Contact() {
 
   return (
     <section
-      className="contact-section relative mt-5 w-full overflow-hidden bg-stone-950/30 px-6 pb-3 pt-9 backdrop-blur-lg"
+      className="contact-section relative z-20 mt-5 w-full overflow-hidden bg-stone-950/30 px-6 pb-3 pt-9 backdrop-blur-lg"
       id="contact"
     >
       <SectionHeading>Contact me</SectionHeading>
@@ -88,7 +88,7 @@ function Contact() {
             <h2 className="mb-3 text-3xl font-bold text-purple-500">
               Get in Touch
             </h2>
-            <p className="mb-4 text-white/85">
+            <p className="mb-4">
               I&apos;m always open to new opportunities and collaboration. Feel
               free to reach out!
             </p>

@@ -85,22 +85,24 @@ function About() {
         up-to-date with the latest trends in web development, seeking to have an
         opportunity that matches my skills.
       </motion.p>
-      <motion.a
-        className="mt-8 flex items-center justify-center justify-self-end"
-        href={my_resume}
-        download
-        rel="noopener noreferrer"
-        target="_blank"
-        variants={aboutVariantsFromLeft}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
-      >
-        <Button btnAnimated="secondary">
-          {' '}
-          Download CV <RiDownload2Fill className="ml-3" size={20} />
-        </Button>
-      </motion.a>
+      
+        <motion.a
+          className="mt-8 flex items-center justify-center justify-self-end"
+          href={my_resume}
+          download
+          rel="noopener noreferrer"
+          target="_blank"
+          variants={aboutVariantsFromLeft}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
+          <Button btnAnimated="secondary">
+            {' '}
+            Download CV <RiDownload2Fill className="ml-3" size={20} />
+          </Button>
+        </motion.a>
+    
     </section>
   );
 }

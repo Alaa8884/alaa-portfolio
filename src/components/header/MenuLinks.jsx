@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 import { motion } from 'framer-motion';
 import { MENULINKS } from '../../assets/constants';
+import LIghtModeBtn from '../ui/LIghtModeBtn';
 const variants = {
   open: {
     transition: {
@@ -42,6 +43,7 @@ function MenuLinks({ setOpen }) {
           {item.label}
         </motion.a>
       ))}
+      <LIghtModeBtn/>
     </motion.div>
   );
 }

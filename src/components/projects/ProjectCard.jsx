@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
-import { RiGithubFill,  RiPlayCircleFill } from '@remixicon/react';
+import { RiGithubFill, RiPlayCircleFill } from '@remixicon/react';
 import { motion } from 'framer-motion';
+import ProjectButton from './ProjectButton';
 
 const projectVariants = {
   hidden: {
@@ -53,28 +54,14 @@ function ProjectCard({ item }) {
             ))}
           </div>
           <div className="flex items-center gap-5">
-            <a
-              className="before:ease before:content-['GitHub Repo'] w-37 relative flex cursor-pointer items-center justify-center overflow-hidden rounded-2xl border border-black bg-stone-500 px-2 py-2 shadow-2xl before:absolute before:left-0 before:-ml-2 before:h-48 before:w-40 before:origin-top-right before:-translate-x-full before:translate-y-12 before:-rotate-90 before:bg-black before:transition-all before:duration-300 hover:text-white hover:shadow-stone-700 hover:before:-rotate-180"
-              href={gitHubLink}
-              target="_blank"
-              rel="noopener norefferer"
-            >
-              <span className="relative z-10 flex items-center justify-center gap-1">
-                <RiGithubFill size={20} /> GitHub Repo
-              </span>
-            </a>{' '}
-            <a
-              className="before:ease before:content-['GitHub Repo'] relative flex w-32 cursor-pointer items-center justify-center overflow-hidden rounded-2xl border border-black bg-purple-700 px-2 py-2 shadow-2xl before:absolute before:left-0 before:-ml-2 before:h-48 before:w-48 before:origin-top-right before:-translate-x-full before:translate-y-12 before:-rotate-90 before:bg-purple-500 before:text-black before:transition-all before:duration-300 hover:text-white hover:shadow-black hover:before:-rotate-180"
-              href={liveDemoLink}
-              target="_blank"
-              rel="noopener norefferer"
-            >
-              <span className="relative z-10 flex items-center justify-center gap-1">
-                {' '}
-                <RiPlayCircleFill />
-                Live Demo
-              </span>
-            </a>
+            <ProjectButton href={gitHubLink} btnColor="black">
+              <RiGithubFill size={20} /> GitHub Repo
+            </ProjectButton>
+            <ProjectButton href={liveDemoLink} btnColor="purple">
+              {' '}
+              <RiPlayCircleFill size={20} />
+              Live Demo
+            </ProjectButton>
           </div>
         </div>
       </div>

@@ -47,6 +47,7 @@ function MobileMenu() {
         variants={variants}
       >
         <MenuLinks setOpen={setOpen} />
+        
       </motion.div>
       <ToggleButton setOpen={setOpen} />
     </motion.div>

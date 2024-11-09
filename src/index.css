@@ -7,13 +7,21 @@
     font-family: 'Inter', sans-serif;
     font-optical-sizing: auto;
     scroll-behavior: smooth;
-    background: #000;
-    color: #fff;
+    
   }
 }
-* {
-  box-sizing: border-box;
+
+.light {
+  background: #fff;
+  color: #000;
 }
+.dark {
+background: #000;
+    color: #fff;
+}
+
+/* box-sizing: border-box;
+}  */
 body {
   background: var(--main-background);
 }
