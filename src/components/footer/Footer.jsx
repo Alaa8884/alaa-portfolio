@@ -3,8 +3,10 @@ function Footer() {
   const year = date.getFullYear()
 
   return (
-    <footer className=" w-full py-5 bg-purple-800">
-      <div className=" w-full flex items-center justify-center md:text-xl text-base">&copy; {year} Alaa Mohammed, All rights reserved.</div>
+    <footer className="w-full bg-purple-800 py-5">
+      <div className="flex w-full items-center justify-center text-base font-semibold md:text-xl">
+        &copy; {year} Alaa Mohammed, <span className="text-black ml-1 "> All rights reserved.</span>
+      </div>
     </footer>
   );
 }

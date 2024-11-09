@@ -19,7 +19,7 @@ function SectionHeading({children}) {
       className="mb-6 text-center font-new-mono text-[28px] tracking-wider md:text-start md:text-4xl lg:text-5xl"
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: false }}
+      viewport={{ once: false, amount: 0.5 }}
       variants={headingVariants}
     >
       {children}

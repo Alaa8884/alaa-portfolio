@@ -27,11 +27,11 @@ function ProjectCard({ item }) {
   const { image, name, description, gitHubLink, liveDemoLink, tech } = item;
   return (
     <motion.div
-      className="relative h-[300px] w-[300] overflow-hidden rounded-lg transition-transform md:w-[350px] lg:w-[380px] mb-5"
+      className="relative mb-5 h-[300px] w-[300] overflow-hidden rounded-lg transition-transform md:w-[350px] lg:w-[380px]"
       variants={projectVariants}
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: false }}
+      viewport={{ once: false, amount: 0.5 }}
     >
       <img
         src={image}
@@ -69,7 +69,9 @@ function ProjectCard({ item }) {
               target="_blank"
               rel="noopener norefferer"
             >
-              <span className="relative z-10 flex items-center justify-center gap-1"> <RiPlayCircleFill/>
+              <span className="relative z-10 flex items-center justify-center gap-1">
+                {' '}
+                <RiPlayCircleFill />
                 Live Demo
               </span>
             </a>

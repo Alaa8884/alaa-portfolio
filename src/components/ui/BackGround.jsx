@@ -65,7 +65,7 @@ const circleVariants = {
 
 function BackGround() {
   return (
-    <div className="--main-background pointer-events-none fixed left-0 top-0 z-10 flex h-full w-full items-center justify-center overflow-hidden opacity-70 blur-[100px] filter">
+    <div className=" pointer-events-none fixed left-0 top-0 z-10 flex h-full w-full items-center justify-center overflow-hidden opacity-70 blur-[100px] filter">
       <motion.div
         className="absolute h-[250px] w-[350px] rounded-full bg-indigo-300"
         variants={circleVariants}

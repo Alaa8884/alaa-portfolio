@@ -14,12 +14,12 @@ function App() {
       <Header />
       <main className="relative z-30 mx-auto max-w-7xl overflow-x-hidden antialiased">
         <Hero />
-        <About/>
+        <About />
         <Skills />
         <Projects />
         <Contact />
       </main>
-        <Footer/>
+      <Footer />
     </>
   );
 }

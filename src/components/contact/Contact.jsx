@@ -1,8 +1,8 @@
+import { motion } from 'framer-motion';
 import emailjs from 'emailjs-com';
 import Lottie from 'lottie-react';
 import SectionHeading from '../ui/SectionHeading';
 import contact from '../../assets/contact_animation/Contact.json';
-
 import {
   RiLinkedinBoxFill,
   RiMailSendFill,
@@ -10,6 +10,27 @@ import {
   RiWhatsappFill,
 } from '@remixicon/react';
 import Button from '../ui/Button';
+
+const aboutVariantsFromLeft = {
+  hidden: { opacity: 0, y: 70, x: -150 },
+  visible: {
+    opacity: 1,
+    x: 0,
+    y: 0,
+    transition: { duration: 0.5, ease: 'easeInOut' },
+  },
+};
+const aboutVariantsFromRight = {
+  hidden: { opacity: 0, y: 70,x: 200 },
+  visible: {
+    opacity: 1,
+    x: 0,
+    y: 0,
+    transition: { duration: 0.5, ease: 'easeInOut' },
+  },
+};
+
+
 
 function Contact() {
 
@@ -43,7 +64,13 @@ function handleSendEmail(e) {
 
       <div className="mx-auto mb-16 max-w-7xl">
         <div className="flex flex-col items-center justify-between md:flex-row">
-          <div className="mb-8 ml-1 md:mb-0 md:w-1/2">
+          <motion.div
+            className="mb-8 ml-1 md:mb-0 md:w-1/2"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: false }}
+            variants={aboutVariantsFromLeft}
+          >
             <h2 className="mb-3 text-3xl font-bold text-purple-500">
               Get in Touch
             </h2>
@@ -72,10 +99,14 @@ function handleSendEmail(e) {
               animationData={contact}
               className="mx-auto w-[300px] md:h-[350px] md:w-[350px] lg:h-[500px] lg:w-[500px]"
             />
-          </div>
-          <form
+          </motion.div>
+          <motion.form
             className="w-full rounded-lg border border-purple-500 p-6 shadow-lg shadow-purple-500 md:w-1/2"
             onSubmit={handleSendEmail}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: false }}
+            variants={aboutVariantsFromRight}
           >
             <h1 className="mb-7 text-4xl font-bold">Contact Me</h1>
             <div className="mb-4">
@@ -114,7 +145,7 @@ function handleSendEmail(e) {
             <Button btnAnimated="primary">
               Send Message <RiMailSendFill className="ml-3" size={20} />
             </Button>
-          </form>
+          </motion.form>
         </div>
       </div>
     </section>

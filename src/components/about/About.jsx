@@ -6,7 +6,7 @@ import my_resume from '../../assets/resume/my-resume.pdf';
 
 
 const aboutVariantsFromLeft = {
-  hidden: { opacity: 0, y: 70, x: -350 },
+  hidden: { opacity: 0, y: 70, x: -150 },
   visible: {
     opacity: 1,
     x: 0,
@@ -15,7 +15,7 @@ const aboutVariantsFromLeft = {
   },
 };
 const aboutVariantsFromRight = {
-  hidden: { opacity: 0, y: 70,x: 350 },
+  hidden: { opacity: 0, y: 70,x: 200 },
   visible: {
     opacity: 1,
     x: 0,
@@ -27,7 +27,7 @@ const aboutVariantsFromRight = {
 function About() {
   return (
     <section
-      className="about-section mx-auto px-4 pt-7 md:min-h-screen md:px-6"
+      className="about-section mx-auto my-9 px-4 pt-7 md:min-h-screen md:px-6"
       id="about"
     >
       <SectionHeading>About Me</SectionHeading>
@@ -44,7 +44,7 @@ function About() {
         className="mt-4 text-lg"
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: false }}
+        viewport={{ once: true }}
         variants={aboutVariantsFromLeft}
       >
         I started my self-learner journey in web development two years ago with
@@ -54,7 +54,7 @@ function About() {
         className="mt-4 text-lg"
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: false }}
+        viewport={{ once: true }}
         variants={aboutVariantsFromRight}
       >
         With proficiency in the Frontend devlopment tools (HTML5, CSS3,
@@ -67,7 +67,7 @@ function About() {
         className="mt-4 text-lg"
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: false }}
+        viewport={{ once: true }}
         variants={aboutVariantsFromLeft}
       >
         {' '}
@@ -78,7 +78,7 @@ function About() {
         className="mt-4 text-lg"
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: false }}
+        viewport={{ once: true }}
         variants={aboutVariantsFromRight}
       >
         As I am passionate about learning new technologies and keeping myself
@@ -86,7 +86,7 @@ function About() {
         opportunity that matches my skills.
       </motion.p>
       <motion.a
-        className="mt-8 flex items-center justify-center justify-self-end md:justify-self-start"
+        className="mt-8 flex items-center justify-center justify-self-end"
         href={my_resume}
         download
         rel="noopener noreferrer"
@@ -94,7 +94,7 @@ function About() {
         variants={aboutVariantsFromLeft}
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: false }}
+        viewport={{ once: true }}
       >
         <Button btnAnimated="secondary">
           {' '}
