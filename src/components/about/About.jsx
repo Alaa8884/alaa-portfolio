@@ -33,8 +33,7 @@ function About() {
       <SectionHeading>About Me</SectionHeading>
       <div className="text-center">
         <h2 className="mt-2 text-2xl font-extrabold leading-8 tracking-tight md:text-3xl">
-          <span className="mr-2 text-purple-500">Hi,</span> I&apos;m Alaa
-          Mohammed
+          <span className="text-[#7309E2] mr-2">Hi,</span> I&apos;m Alaa Mohammed
         </h2>
         <motion.p className="mt-4 text-xl lg:mx-auto">
           A Frontend Developer with expertise in web development
@@ -85,24 +84,23 @@ function About() {
         up-to-date with the latest trends in web development, seeking to have an
         opportunity that matches my skills.
       </motion.p>
-      
-        <motion.a
-          className="mt-8 flex items-center justify-center justify-self-end"
-          href={my_resume}
-          download
-          rel="noopener noreferrer"
-          target="_blank"
-          variants={aboutVariantsFromLeft}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-        >
-          <Button btnAnimated="secondary">
-            {' '}
-            Download CV <RiDownload2Fill className="ml-3" size={20} />
-          </Button>
-        </motion.a>
-    
+
+      <motion.a
+        className="mt-8 flex items-center justify-center justify-self-end"
+        href={my_resume}
+        download
+        rel="noopener noreferrer"
+        target="_blank"
+        variants={aboutVariantsFromLeft}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+      >
+        <Button btnAnimated="secondary">
+          {' '}
+          Download CV <RiDownload2Fill className="ml-3" size={20} />
+        </Button>
+      </motion.a>
     </section>
   );
 }

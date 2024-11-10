@@ -4,7 +4,7 @@ function Footer() {
 
   return (
     <footer className="relative z-20 w-full bg-[#7508E8] py-5">
-      <div className="flex w-full items-center justify-center font-semibold sm:text-sm md:text-xl">
+      <div className=" text-white flex w-full items-center justify-center font-semibold sm:text-sm md:text-xl">
         &copy; {year} Alaa. M, All rights reserved.
       </div>
     </footer>

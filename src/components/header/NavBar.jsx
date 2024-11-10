@@ -16,12 +16,12 @@ function NavBar() {
             <a
               href={link.href}
               key={index}
-              className="text-lg font-semibold transition duration-300 hover:text-purple-400"
+              className="hover:text-[#7309E2] text-lg font-semibold transition duration-300"
             >
               {link.label}
             </a>
           ))}
-         <LIghtModeBtn/>
+          <LIghtModeBtn />
         </div>
       </div>
       <MobileMenu />

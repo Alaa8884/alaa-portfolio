@@ -28,7 +28,7 @@ const itemVariants = {
 function MenuLinks({ setOpen }) {
   return (
     <motion.div
-      className=" links absolute flex h-full w-full flex-col items-center justify-center gap-6 md:gap-8 md:text-2xl"
+      className="links absolute flex h-full w-full flex-col items-center justify-center gap-6 md:gap-8 md:text-2xl"
       variants={variants}
     >
       {MENULINKS.map((item, index) => (
@@ -36,14 +36,14 @@ function MenuLinks({ setOpen }) {
           href={item.href}
           key={index}
           variants={itemVariants}
-          whileHover={{ scale: 1.3 }}
+          whileHover={{ scale: 1.3, color: '#7309E2' }}
           whileTap={{ scale: 0.95 }}
           onClick={() => setOpen((prev) => !prev)}
         >
           {item.label}
         </motion.a>
       ))}
-      <LIghtModeBtn/>
+      <LIghtModeBtn />
     </motion.div>
   );
 }
