@@ -83,7 +83,6 @@ function Hero() {
             width={350}
             height={350}
             className="mt-12 h-[200px] w-[200px] rounded-3xl md:mt-0 md:h-[350px] md:w-[350px]"
-            loading="lazy"
           />
         </motion.div>
       </div>

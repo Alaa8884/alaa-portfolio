@@ -97,16 +97,18 @@ function Contact() {
                 href="https://www.linkedin.com/in/alaa-mohammed-youssef-9b9268220/"
                 className="text-[#0a66c2]"
               >
-                <RiLinkedinBoxFill />
+                <RiLinkedinBoxFill aria-label="linked button" />
               </a>
               <a
                 href={whatsappUrl}
-                className="text-[#25d366]"target="_blank" rel="noopener noreferrer"
+                className="text-[#25d366]"
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                <RiWhatsappFill />
+                <RiWhatsappFill aria-label="whatsapp button" />
               </a>
               <a href="tel:+201019365451" className="text-[#06f55e]">
-                <RiPhoneFill />
+                <RiPhoneFill aria-label="phone button" />
               </a>
             </div>
             <Lottie

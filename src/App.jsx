@@ -1,11 +1,12 @@
+import { lazy } from 'react';
 import About from './components/about/About';
-import Contact from './components/contact/Contact';
-import Footer from './components/footer/Footer';
-import Header from './components/header/Header';
-import Hero from './components/hero/Hero';
-import Projects from './components/projects/Projects';
-import Skills from './components/skills/Skills';
-import BackGround from './components/ui/BackGround';
+const Contact = lazy(()=> import('./components/contact/Contact'));
+const Footer = lazy(()=> import('./components/footer/Footer'));
+const Header = lazy(()=> import('./components/header/Header'));
+const Hero = lazy(()=> import('./components/hero/Hero'));
+const Projects = lazy(()=> import('./components/projects/Projects'));
+const Skills = lazy(()=> import('./components/skills/Skills'));
+const BackGround = lazy(()=> import('./components/ui/BackGround'));
 
 function App() {
   return (
@@ -18,7 +19,7 @@ function App() {
         <Skills />
         <Projects />
       </main>
-        <Contact />
+      <Contact />
       <Footer />
     </>
   );
