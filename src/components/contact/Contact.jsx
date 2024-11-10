@@ -117,7 +117,7 @@ function Contact() {
             />
           </motion.div>
           <motion.form
-            className="w-full rounded-lg border border-purple-500 p-6 shadow-lg shadow-purple-500 md:w-1/2"
+            className="w-full rounded-lg border border-purple-500 p-6 shadow-sm shadow-purple-500 md:w-1/2"
             onSubmit={handleSendEmail}
             initial="hidden"
             whileInView="visible"

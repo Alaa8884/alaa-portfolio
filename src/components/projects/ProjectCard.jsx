@@ -37,7 +37,7 @@ function ProjectCard({ item }) {
       <img
         src={image}
         alt={`${name} image`}
-        className="absolute inset-0 h-full w-full transition-opacity duration-300"
+        className="absolute inset-0 h-full w-full transition-opacity duration-300" loading='lazy'
       />
       <div className="relative z-20 flex h-full flex-col justify-between bg-black/60 p-4 text-white">
         <h2 className="mb-4 text-2xl font-medium">{name}</h2>

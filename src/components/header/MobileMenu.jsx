@@ -43,7 +43,7 @@ function MobileMenu() {
       ref={menuRef}
     >
       <motion.div
-        className="bg fixed bottom-0 right-0 top-[-13px] z-50 w-[200px] bg-stone-950/30 filter backdrop-blur-lg"
+        className="bg fixed bottom-0 right-0 top-[-14px] z-50 w-[200px] bg-stone-950/30 filter backdrop-blur-lg"
         variants={variants}
       >
         <MenuLinks setOpen={setOpen} />

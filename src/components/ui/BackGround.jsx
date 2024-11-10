@@ -67,32 +67,32 @@ function BackGround() {
   return (
     <div className=" pointer-events-none fixed left-0 top-0 z-10 flex h-full w-full items-center justify-center overflow-hidden opacity-70 blur-[100px] filter">
       <motion.div
-        className="absolute h-[250px] w-[350px] rounded-full bg-indigo-300"
+        className="absolute h-[250px] w-[350px] rounded-full bg-purple-300"
         variants={circleVariants}
         animate="animate01"
       ></motion.div>
       <motion.div
-        className="absolute h-[260px] w-[360px] rounded-full bg-indigo-300"
+        className="absolute h-[260px] w-[360px] rounded-full bg-purple-300"
         variants={circleVariants}
         animate="animate02"
       ></motion.div>
       <motion.div
-        className="absolute h-[270px] w-[370px] rounded-full bg-indigo-300"
+        className="absolute h-[270px] w-[370px] rounded-full bg-purple-300"
         variants={circleVariants}
         animate="animate03"
       ></motion.div>
       <motion.div
-        className="absolute h-[280px] w-[380px] rounded-full bg-purple-400"
+        className="absolute h-[280px] w-[380px] rounded-full bg-[#7309E2]"
         variants={circleVariants}
         animate="animate04"
       ></motion.div>
       <motion.div
-        className="absolute h-[290px] w-[390px] rounded-full bg-purple-400"
+        className="absolute h-[290px] w-[390px] rounded-full bg-[#7309E2]"
         variants={circleVariants}
         animate="animate05"
       ></motion.div>
       <motion.div
-        className="absolute h-[300px] w-[400px] rounded-full bg-purple-400"
+        className="absolute h-[300px] w-[400px] rounded-full bg-[#7309E2]"
         variants={circleVariants}
         animate="animate06"
       ></motion.div>
