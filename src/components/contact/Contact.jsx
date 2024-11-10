@@ -96,6 +96,7 @@ function Contact() {
               <a
                 href="https://www.linkedin.com/in/alaa-mohammed-youssef-9b9268220/"
                 className="text-[#0a66c2]"
+                target="_blank"
               >
                 <RiLinkedinBoxFill aria-label="linked button" />
               </a>
