@@ -22,7 +22,7 @@ const imageVariants = {
   hidden: { clipPath: 'inset( 50% 0 50%)' },
   visible: {
     clipPath: 'inset( 0% 0 0%)',
-    transition: { duration: 0.4, ease: 'easeInOut' },
+    transition: { duration: 0.3, ease: 'easeInOut' },
   },
 };
 

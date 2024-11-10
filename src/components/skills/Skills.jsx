@@ -1,17 +1,17 @@
-import Html from '../../assets/images/Html.png';
-import Css from '../../assets/images/CSS.png';
-import Javascript from '../../assets/images/JS.png';
-import ReactLogo from '../../assets/images/react-icon.png';
-import ReduxLogo from '../../assets/images/Redux.png';
-import Tailwind from '../../assets/images/Tailwind Css.png';
-import Bootstrap from '../../assets/images/Bootstrap.png';
+import Html from '../../assets/images/Html.webp';
+import Css from '../../assets/images/CSS.webp';
+import Javascript from '../../assets/images/JS.webp';
+import ReactLogo from '../../assets/images/react-icon.webp';
+import ReduxLogo from '../../assets/images/Redux.webp';
+import Tailwind from '../../assets/images/Tailwind Css.webp';
+import Bootstrap from '../../assets/images/Bootstrap.webp';
 import StyledImage from '../../assets/images/styled-component.webp';
-import MaterialUI from '../../assets/images/material.png';
+import MaterialUI from '../../assets/images/material.webp';
 import FramerMotion from '../../assets/images/framer_motion2.webp';
-import NextJs from '../../assets/images/next.png';
-import Sass from '../../assets/images/Sass.png';
+import NextJs from '../../assets/images/next.webp';
+import Sass from '../../assets/images/Sass.webp';
 import Github from '../../assets/images/Github3.webp';
-import Git from '../../assets/images/git.png';
+import Git from '../../assets/images/git.webp';
 import SectionHeading from '../ui/SectionHeading';
 import SkillCard from './SkillCard';
 
