@@ -35,10 +35,10 @@ function MobileMenu() {
     document.addEventListener('mousedown', handleClickOutside);
   }, [menuRef]);
 
-  
   return (
     <motion.div
-      className="sidebar top-[25px] flex w-[200px] flex-col items-center justify-center bg-stone-950/30 lg:hidden"
+      className="sidebar top-[25px] flex w-[200px] flex-col items-center justify-center bg-stone-950/30 lg:hidden "
+      initial="closed"
       animate={open ? 'open' : 'closed'}
       ref={menuRef}
     >
@@ -47,7 +47,6 @@ function MobileMenu() {
         variants={variants}
       >
         <MenuLinks setOpen={setOpen} />
-        
       </motion.div>
       <ToggleButton setOpen={setOpen} />
     </motion.div>
