@@ -59,7 +59,7 @@ function About() {
       >
         With proficiency in the Frontend devlopment tools (HTML5, CSS3,
         Bootstrap, Sass, Javascript, React, Redux, MaterialUI, Styled Component,
-        Framer Motion), i have built Projects such as admin dashboard, food
+        Framer Motion), I have built projects such as admin dashboard, food
         ordering website , banking account app , and even a admin panel for
         hotel reservation dashboard.
       </motion.p>
