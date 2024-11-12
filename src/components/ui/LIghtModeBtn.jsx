@@ -26,14 +26,19 @@ function LIghtModeBtn() {
   };
 
   return (
-    <button onClick={() => handleDarkMode()} className="cursor-pointer">
-      {' '}
-      {islight ? (
-        <RiMoonFill aria-label="dark mode button" className="text-black" />
-      ) : (
-        <RiSunFill aria-label="light mode button" className="text-[#D14009]" />
-      )}
-    </button>
+    <div>
+      <button onClick={() => handleDarkMode()} className="cursor-pointer">
+        {' '}
+        {islight ? (
+          <RiMoonFill aria-label="dark mode button" className="text-black" />
+        ) : (
+          <RiSunFill
+            aria-label="light mode button"
+            className="text-[#f14907]"
+          />
+        )}
+      </button>
+    </div>
   );
 }
 

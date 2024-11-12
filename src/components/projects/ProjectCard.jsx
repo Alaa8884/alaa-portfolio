@@ -6,7 +6,7 @@ import ProjectButton from './ProjectButton';
 const projectVariants = {
   hidden: {
     opacity: 0,
-    scale: 0.1,
+    scale: 0.2,
     rotate: -70,
     y: 50,
   },
@@ -37,7 +37,8 @@ function ProjectCard({ item }) {
       <img
         src={image}
         alt={`${name} image`}
-        className="absolute inset-0 h-full w-full transition-opacity duration-300" loading='lazy'
+        className="absolute inset-0 h-full w-full transition-opacity duration-300"
+        loading="lazy"
       />
       <div className="relative z-20 flex h-full flex-col justify-between bg-black/60 p-4 text-white">
         <h2 className="mb-4 text-2xl font-medium">{name}</h2>
@@ -47,13 +48,13 @@ function ProjectCard({ item }) {
             {tech.map((el, i) => (
               <p
                 key={i}
-                className="rounded-2xl border-2 border-purple-500 px-2 py-1 text-xs"
+                className=" text-center rounded-2xl border-2 border-purple-500 p-1 text-xs"
               >
                 {el}
               </p>
             ))}
           </div>
-          <div className="flex items-center gap-5">
+          <div className="flex items-center gap-1 lg:gap-5">
             <ProjectButton href={gitHubLink} btnColor="black">
               <RiGithubFill size={20} /> GitHub Repo
             </ProjectButton>

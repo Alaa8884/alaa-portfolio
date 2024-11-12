@@ -79,7 +79,7 @@ function Contact() {
       <div className="mx-auto mb-16 max-w-7xl">
         <div className="flex flex-col items-center justify-between md:flex-row">
           <motion.div
-            className="mb-8 ml-1 md:mb-0 md:w-1/2"
+            className="mb-8 ml-1 text-center md:mb-0 md:w-1/2 md:text-start"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: false }}
@@ -92,7 +92,7 @@ function Contact() {
               I&apos;m always open to new opportunities and collaboration. Feel
               free to reach out!
             </p>
-            <div className="flex space-x-4">
+            <div className="flex items-center justify-center space-x-4 md:justify-start">
               <a
                 href="https://www.linkedin.com/in/alaa-mohammed-youssef-9b9268220/"
                 className="text-[#0a66c2]"
@@ -126,7 +126,7 @@ function Contact() {
             variants={aboutVariantsFromRight}
             ref={formRef}
           >
-            <h1 className="mb-7 text-4xl font-bold">Contact Me</h1>
+            <h1 className=" text-center md:text-start mb-7 text-4xl font-bold">Contact Me</h1>
             <div className="mb-4">
               <label htmlFor="name" className="block text-sm font-medium">
                 Name
@@ -168,10 +168,11 @@ function Contact() {
                 className="focus:ring-opacity- mx-auto mt-2 block h-32 w-full resize-none rounded-md border-purple-500 p-2 text-stone-800 shadow-sm outline-none focus:border-purple-600 focus:ring focus:ring-purple-500"
               />
             </div>
-
-            <Button btnAnimated="primary">
-              Send Message <RiMailSendFill className="ml-3" size={20} />
-            </Button>
+            <div className=' flex justify-center md:justify-start'>
+              <Button btnAnimated="primary">
+                Send Message <RiMailSendFill className="ml-3" size={20} />
+              </Button>
+            </div>
           </motion.form>
         </div>
       </div>

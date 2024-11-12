@@ -107,7 +107,7 @@ function About() {
       </motion.p>
 
       <motion.a
-        className="mt-8 flex items-center justify-center justify-self-end"
+        className="mt-8 flex items-center justify-center justify-self-center md:justify-self-end"
         href={my_resume}
         download
         rel="noopener noreferrer"
