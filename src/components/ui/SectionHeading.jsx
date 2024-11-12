@@ -1,6 +1,5 @@
 /* eslint-disable react/prop-types */
-import { motion } from "framer-motion";
-
+import { motion } from 'framer-motion';
 
 const headingVariants = {
   hidden: { opacity: 0, y: 100, x: -150 },
@@ -12,14 +11,13 @@ const headingVariants = {
   },
 };
 
-
-function SectionHeading({children}) {
+function SectionHeading({ children }) {
   return (
     <motion.h1
       className="mb-6 text-center font-new-mono text-[28px] tracking-wider md:text-start md:text-4xl lg:text-5xl"
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: false, amount:0.50 }}
+      viewport={{ once: true, amount: 0.5 }}
       variants={headingVariants}
     >
       {children}
@@ -27,4 +25,4 @@ function SectionHeading({children}) {
   );
 }
 
-export default SectionHeading
+export default SectionHeading;

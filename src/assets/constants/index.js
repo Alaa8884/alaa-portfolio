@@ -46,12 +46,7 @@ export const PROJECTS = [
       'https://github.com/Alaa8884/React-ain-sokhna-hotel-reservationSite',
     liveDemoLink:
       'https://ain-sokhna-hotel-reservation-dashboard.vercel.app/login',
-    tech: [
-      'React',
-      'Redux & Context-API',
-      'Styled Components',
-      ' Supabase',
-    ],
+    tech: ['React', 'Redux & Context-API', 'Styled Components', ' Supabase'],
   },
 
   {

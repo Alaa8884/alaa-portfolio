@@ -61,7 +61,7 @@ function Hero() {
             Building interactive digital solutions that drive business growth.
           </motion.p>
           <motion.a
-            className="mt-8 flex items-center justify-center justify-self-end md:justify-self-start"
+            className="mt-8 flex items-center justify-center justify-self-center md:justify-self-start"
             href={"#contact"}
             variants={textVariants}
           >

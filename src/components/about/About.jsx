@@ -4,7 +4,6 @@ import Button from '../ui/Button';
 import SectionHeading from '../ui/SectionHeading';
 import my_resume from '../../assets/resume/my-resume.pdf';
 
-
 const aboutVariantsFromLeft = {
   hidden: { opacity: 0, y: 70, x: -150 },
   visible: {
@@ -15,10 +14,19 @@ const aboutVariantsFromLeft = {
   },
 };
 const aboutVariantsFromRight = {
-  hidden: { opacity: 0, y: 70,x: 200 },
+  hidden: { opacity: 0, y: 70, x: 200 },
   visible: {
     opacity: 1,
     x: 0,
+    y: 0,
+    transition: { duration: 0.4, ease: 'easeInOut' },
+  },
+};
+
+const aboutVariantsFromBottom = {
+  hidden: { opacity: 0, y: 100 },
+  visible: {
+    opacity: 1,
     y: 0,
     transition: { duration: 0.4, ease: 'easeInOut' },
   },
@@ -32,10 +40,23 @@ function About() {
     >
       <SectionHeading>About Me</SectionHeading>
       <div className="text-center">
-        <h2 className="mt-2 text-2xl font-extrabold leading-8 tracking-tight md:text-3xl">
-          <span className="text-[#7309E2] mr-2">Hi,</span> I&apos;m Alaa Mohammed
-        </h2>
-        <motion.p className="mt-4 text-xl lg:mx-auto">
+        <motion.h2
+          className="mt-2 text-2xl font-extrabold leading-8 tracking-tight md:text-3xl"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={aboutVariantsFromBottom}
+        >
+          <span className="mr-2 text-[#7309E2]">Hi,</span> I&apos;m Alaa
+          Mohammed
+        </motion.h2>
+        <motion.p
+          className="mt-4 text-xl lg:mx-auto"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={aboutVariantsFromBottom}
+        >
           A Frontend Developer with expertise in web development
         </motion.p>
       </div>

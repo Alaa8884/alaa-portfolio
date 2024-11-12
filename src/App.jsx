@@ -1,12 +1,14 @@
 import { lazy } from 'react';
-import About from './components/about/About';
-const Contact = lazy(()=> import('./components/contact/Contact'));
-const Footer = lazy(()=> import('./components/footer/Footer'));
-const Header = lazy(()=> import('./components/header/Header'));
-const Hero = lazy(()=> import('./components/hero/Hero'));
-const Projects = lazy(()=> import('./components/projects/Projects'));
-const Skills = lazy(()=> import('./components/skills/Skills'));
-const BackGround = lazy(()=> import('./components/ui/BackGround'));
+
+import Hero from './components/hero/Hero';
+import Header from './components/header/Header';
+import  BackGround from './components/ui/BackGround';
+const About = lazy(() => import('./components/about/About'));
+const Contact = lazy(() => import('./components/contact/Contact'));
+const Footer = lazy(() => import('./components/footer/Footer'));
+const Projects = lazy(() => import('./components/projects/Projects'));
+const Skills = lazy(() => import('./components/skills/Skills'));
+
 
 function App() {
   return (
