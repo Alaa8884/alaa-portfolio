@@ -66,6 +66,6 @@ export const PROJECTS = [
     image: project6,
     gitHubLink: 'https://github.com/Alaa8884/Narita-group-Website',
     liveDemoLink: 'https://alaa8884.github.io/Narita-group-Website/',
-    tech: ['React', 'JavaScript', 'Css'],
+    tech: ['JavaScript', "Html", 'Css', "Font awesome"],
   },
 ];
