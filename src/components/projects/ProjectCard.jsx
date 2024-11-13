@@ -28,7 +28,7 @@ function ProjectCard({ item }) {
   const { image, name, description, gitHubLink, liveDemoLink, tech } = item;
   return (
     <motion.div
-      className="relative mb-5 h-[300px] w-[300] overflow-hidden rounded-lg transition-transform md:w-[350px] lg:w-[380px]"
+      className="relative mb-5 h-[319px] w-[300] overflow-hidden rounded-lg transition-transform md:w-[350px]"
       variants={projectVariants}
       initial="hidden"
       whileInView="visible"
@@ -48,7 +48,7 @@ function ProjectCard({ item }) {
             {tech.map((el, i) => (
               <p
                 key={i}
-                className=" text-center rounded-2xl border-2 border-purple-500 p-1 text-xs"
+                className="rounded-2xl border-2 border-purple-500 p-1 text-center text-xs"
               >
                 {el}
               </p>

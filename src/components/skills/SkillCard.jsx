@@ -23,7 +23,7 @@ function SkillCard({ image, children }) {
       <img
         src={image}
         alt="Skill image"
-        className="h-9 w-9 md:h-12 md:w-12"
+        className="h-8 w-9 md:h-10 md:w-12"
         loading="lazy"
       />
       <span className="font-semibold">{children}</span>

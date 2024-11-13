@@ -1,6 +1,6 @@
 import project1 from '../images/rent_car.webp';
 import project2 from '../images/masrawy_fast_food.webp';
-import project3 from '../images/admin_dashboard.webp';
+import project3 from '../images/resize.webp';
 import project4 from '../images/task_manager.webp';
 import project5 from '../images/hotel_admin.webp';
 
@@ -40,7 +40,7 @@ export const PROJECTS = [
   {
     name: 'Hotel Reservations dashboard',
     description:
-      'Managing hotel inventory of chalets or rooms, including pricing, capacity, create and manage user accounts.',
+      'Managing hotel inventory of chalets or rooms, including pricing, capacity, manage user accounts.',
     image: project5,
     gitHubLink:
       'https://github.com/Alaa8884/React-ain-sokhna-hotel-reservationSite',
