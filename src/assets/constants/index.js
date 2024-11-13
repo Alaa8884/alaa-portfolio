@@ -3,6 +3,7 @@ import project2 from '../images/masrawy_fast_food.webp';
 import project3 from '../images/resize.webp';
 import project4 from '../images/task_manager.webp';
 import project5 from '../images/hotel_admin.webp';
+import project6 from '../images/narita_group.webp';
 
 export const MENULINKS = [
   { href: '#about', label: 'About' },
@@ -56,6 +57,15 @@ export const PROJECTS = [
     image: project4,
     gitHubLink: 'https://github.com/Alaa8884/my-to-do-list-application',
     liveDemoLink: 'https://my-to-do-list-application.vercel.app/',
+    tech: ['React', 'JavaScript', 'Css'],
+  },
+  {
+    name: 'Narita Group company',
+    description:
+      '(Clone/ Reimplement) of Narita-Group website  with a new design created by me and added new JavaScript feature.',
+    image: project6,
+    gitHubLink: 'https://github.com/Alaa8884/Narita-group-Website',
+    liveDemoLink: 'https://alaa8884.github.io/Narita-group-Website/',
     tech: ['React', 'JavaScript', 'Css'],
   },
 ];
