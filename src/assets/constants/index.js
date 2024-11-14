@@ -38,7 +38,7 @@ export const PROJECTS = [
     tech: ['React', 'JavaScript', 'Redux', 'Bootstrap'],
   },
   {
-    name: 'Hotel Reservations dashboard',
+    name: 'Hotel admin dashboard',
     description:
       'Managing hotel inventory of chalets or rooms, including pricing, capacity, manage user accounts.',
     image: project5,

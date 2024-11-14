@@ -28,7 +28,7 @@ function ProjectCard({ item }) {
   const { image, name, description, gitHubLink, liveDemoLink, tech } = item;
   return (
     <motion.div
-      className="relative mb-5 h-[319px] w-[300] overflow-hidden rounded-lg transition-transform md:w-[350px]"
+      className="relative mb-5 h-[252px] w-[300] overflow-hidden rounded-lg  transition-transform md:h-[293px] md:w-[350px]"
       variants={projectVariants}
       initial="hidden"
       whileInView="visible"
@@ -40,11 +40,11 @@ function ProjectCard({ item }) {
         className="absolute inset-0 h-full w-full transition-opacity duration-300"
         loading="lazy"
       />
-      <div className="relative z-20 flex h-full flex-col justify-between bg-black/60 p-4 text-white">
+      <div className="relative z-20 flex h-full w-full flex-col justify-between bg-black/60 p-4 text-white">
         <h2 className="mb-4 text-2xl font-medium">{name}</h2>
         <div className="flex flex-col justify-between">
-          <p className="mb-3 flex-grow text-base">{description}</p>
-          <div className="mb-4 flex items-center justify-end gap-2">
+          <p className="mb-3 flex-grow md:text-base text-sm">{description}</p>
+          <div className="mb-2 flex items-center justify-end gap-2">
             {tech.map((el, i) => (
               <p
                 key={i}
@@ -54,7 +54,7 @@ function ProjectCard({ item }) {
               </p>
             ))}
           </div>
-          <div className="flex items-center gap-1 lg:gap-5">
+          <div className=" mb-1 flex items-center gap-1 lg:gap-5">
             <ProjectButton href={gitHubLink} btnColor="black">
               <RiGithubFill size={20} /> GitHub Repo
             </ProjectButton>

@@ -11,9 +11,9 @@ function Projects() {
       id="projects"
     >
       <SectionHeading>Projects</SectionHeading>
-      <div className="w-[180px] rounded-2xl text-white shadow-sm shadow-purple-500 self-center">
+      <div className="w-[150px] rounded-2xl text-white shadow-sm shadow-purple-500 self-center">
         <ProjectButton btnColor="black" href="https://github.com/Alaa8884">
-          <RiGithubFill size={20} /> All GitHub Repo
+          <RiGithubFill size={18} />  GitHub Repos
         </ProjectButton>
       </div>
       <div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
