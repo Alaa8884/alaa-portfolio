@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import { motion } from "framer-motion";
+import { motion } from 'framer-motion';
 
 const skillVariantsFromBottom = {
   hidden: { opacity: 0, y: 100 },
@@ -10,7 +10,6 @@ const skillVariantsFromBottom = {
   },
 };
 
-
 function SkillCard({ image, children }) {
   return (
     <motion.div
@@ -20,12 +19,14 @@ function SkillCard({ image, children }) {
       viewport={{ once: true }}
       variants={skillVariantsFromBottom}
     >
-      <img
-        src={image}
-        alt="Skill image"
-        className="h-8 w-9 md:h-10 md:w-12"
-        loading="lazy"
-      />
+      <div className="h-10 w-12">
+        <img
+          src={image}
+          alt="Skill image"
+          className="h-full w-full object-contain"
+          loading="lazy"
+        />
+      </div>
       <span className="font-semibold">{children}</span>
     </motion.div>
   );
