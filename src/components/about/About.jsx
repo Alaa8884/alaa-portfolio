@@ -77,8 +77,8 @@ function About() {
         viewport={{ once: true }}
         variants={aboutVariantsFromRight}
       >
-        With proficiency in the Frontend devlopment tools (HTML5, CSS3,
-        Bootstrap, Sass, Javascript, React, Redux, MaterialUI, Styled Component,
+        With proficiency in the Frontend development tools (HTML5, CSS3,
+        Bootstrap, Sass, Javascript, React, Redux, Material UI, Styled Component,
         Framer Motion), I have built projects such as admin dashboard, food
         ordering website , banking account app , and even a admin panel for
         hotel reservation dashboard.
