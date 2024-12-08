@@ -1,82 +1,36 @@
-import { motion } from 'framer-motion';
 import myPhoto from '../../assets/images/my_photo.webp';
-import {  RiArrowDownDoubleFill, } from '@remixicon/react';
+import { RiArrowDownDoubleFill } from '@remixicon/react';
 import Button from '../ui/Button';
-
-const textVariants = {
-  hidden: { opacity: 0, x: -100, y: 50 },
-  visible: {
-    opacity: 1,
-    x: 0,
-    y: 0,
-    transition: { duration: 0.2, ease: 'linear' },
-  },
-};
-
-const containerVariants = {
-  hidden: { opacity: 1 },
-  visible: { opacity: 1, transition: { staggerChildren: 0.2 } },
-};
-
-const imageVariants = {
-  hidden: { clipPath: 'inset( 50% 0 50%)' },
-  visible: {
-    clipPath: 'inset( 0% 0 0%)',
-    transition: { duration: 0.3, ease: 'easeInOut' },
-  },
-};
+import './Hero.css';
 
 function Hero() {
   return (
     <section>
       <div className="relative flex min-h-screen flex-col-reverse flex-wrap items-center justify-center md:flex-row">
-        <motion.div
-          className="w-full p-5 md:w-1/2 md:p-6"
-          initial="hidden"
-          animate="visible"
-          variants={containerVariants}
-        >
-          <motion.p
-            className="mb-4 mt-3 text-center text-xl md:mb-6 md:mt-14 md:text-start md:text-2xl lg:text-3xl"
-            variants={textVariants}
-          >
+        <div className="w-full p-5 md:w-1/2 md:p-6">
+          <p className="hero-text hero-text-delay-1 mb-4 mt-3 text-center text-xl md:mb-6 md:mt-14 md:text-start md:text-2xl lg:text-3xl">
             Hey there! 🖐️ My name is
-          </motion.p>
-          <motion.h1
-            className="mb-7 text-center font-new-mono text-2xl md:text-start md:text-[28px] lg:text-5xl"
-            variants={textVariants}
-          >
+          </p>
+          <h1 className="hero-text hero-text-delay-2 mb-7 text-center font-new-mono text-2xl md:text-start md:text-[28px] lg:text-5xl">
             Alaa <span className="ml-3">Mohammed</span>
-          </motion.h1>
-          <motion.p
-            className="mb-4 text-base md:text-2xl"
-            variants={textVariants}
-          >
+          </h1>
+          <p className="hero-text hero-text-delay-3 mb-4 text-base md:text-2xl">
             Frontend developer React.js with 1 year of experience.
-          </motion.p>
-          <motion.p
-            className="text-base leading-8 md:text-2xl"
-            variants={textVariants}
-          >
+          </p>
+          <p className="hero-text hero-text-delay-4 text-base leading-8 md:text-2xl">
             Building interactive digital solutions that drive business growth.
-          </motion.p>
-          <motion.a
-            className="mt-8 flex items-center justify-center justify-self-center md:justify-self-start"
-            href={"#contact"}
-            variants={textVariants}
+          </p>
+          <a
+            className="hero-text hero-text-delay-5 mt-8 flex items-center justify-center justify-self-center md:justify-self-start"
+            href="#contact"
           >
             <Button btnAnimated="primary">
               {' '}
-             Contact Me <RiArrowDownDoubleFill className="ml-3" size={20} />
+              Contact Me <RiArrowDownDoubleFill className="ml-3" size={20} />
             </Button>
-          </motion.a>
-        </motion.div>
-        <motion.div
-          className="flex w-full items-center justify-center p-6 md:w-1/2"
-          initial="hidden"
-          animate="visible"
-          variants={imageVariants}
-        >
+          </a>
+        </div>
+        <div className="hero-image flex w-full items-center justify-center p-6 md:w-1/2">
           <img
             src={myPhoto}
             alt="My photo"
@@ -84,7 +38,7 @@ function Hero() {
             height={350}
             className="mt-12 h-[200px] w-[200px] rounded-3xl md:mt-0 md:h-[350px] md:w-[350px]"
           />
-        </motion.div>
+        </div>
       </div>
     </section>
   );

@@ -40,7 +40,7 @@ function MenuLinks({ setOpen }) {
           whileTap={{ scale: 0.95 }}
           onClick={() => setOpen((prev) => !prev)}
         >
-          {item.label}
+          <span className='text-[#7309E2]'>&lt;</span>{item.label}<span className='text-[#7309E2]'>/&gt;</span>
         </motion.a>
       ))}
       <LIghtModeBtn />

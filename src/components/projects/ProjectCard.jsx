@@ -1,38 +1,38 @@
 /* eslint-disable react/prop-types */
 import { RiGithubFill, RiPlayCircleFill } from '@remixicon/react';
-import { motion } from 'framer-motion';
+import { useEffect, useRef } from 'react';
 import ProjectButton from './ProjectButton';
-
-const projectVariants = {
-  hidden: {
-    opacity: 0,
-    scale: 0.2,
-    rotate: -70,
-    y: 50,
-  },
-  visible: {
-    opacity: 1,
-    scale: 1,
-    rotate: 0,
-    y: 50,
-    transition: {
-      duration: 0.5,
-      ese: 'easeInOut',
-      type: 'spring',
-      bounce: 0.4,
-    },
-  },
-};
+import './ProjectCard.css';
 
 function ProjectCard({ item }) {
   const { image, name, description, gitHubLink, liveDemoLink, tech } = item;
+  const cardRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate');
+        }
+      },
+      { threshold: 0.5 }
+    );
+
+    if (cardRef.current) {
+      observer.observe(cardRef.current);
+    }
+
+    return () => {
+      if (cardRef.current) {
+        observer.unobserve(cardRef.current);
+      }
+    };
+  }, []);
+
   return (
-    <motion.div
-      className="relative mb-5 h-[252px] w-[300] overflow-hidden rounded-lg  transition-transform md:h-[293px] md:w-[350px]"
-      variants={projectVariants}
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: false, amount: 0.5 }}
+    <div
+      ref={cardRef}
+      className="project-card relative mb-5 h-[252px] w-[300] overflow-hidden rounded-lg transition-transform md:h-[293px] md:w-[350px]"
     >
       <img
         src={image}
@@ -66,7 +66,7 @@ function ProjectCard({ item }) {
           </div>
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 }
 

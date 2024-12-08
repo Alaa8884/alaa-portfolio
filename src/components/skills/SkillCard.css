@@ -1,0 +1,18 @@
+@keyframes slideFromBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(150px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.skill-card {
+  opacity: 0;
+}
+
+.skill-card.animate {
+  animation: slideFromBottom 0.4s ease-in-out forwards;
+}
